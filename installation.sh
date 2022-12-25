@@ -21,7 +21,7 @@ if [ !? -ne 0 ]
 echo "tsh not installed"
 fi
 }
-awscli
-netcat
-tsh
+awscli ()
+netcat ()
+tsh ()
 
