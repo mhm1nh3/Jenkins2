@@ -1,27 +1,22 @@
 #!/bin/bash
-awscli () { 
-   apt update -y
-   apt install aws cli
-if [ !? -ne 0 ]
-echo "its not installed"
-fi
+install_awscli()
+{
+    sudo apt-get update
+   sudo apt-get -y install awscli
+    if [ $? -ne 0 ]; then
+    echo "awscli not installed"
+    fi
+    echo "awscli installed successfully"
+}
+install_netcat()
+{
+   sudo apt-get update
+   sudo apt-get -y install netcat
+    if [ $? -ne 0 ]; then
+    echo "netcat not installed"
+    fi
+    echo "netcat installed successfully"
 }
 
-netcat () { 
-   apt update -y
-   apt install netcat
-if [ !? -ne 0 ]
-echo "netcat not installed"
-fi
-}
-tsh () { 
-   apt update -y
-   apt install tsh
-if [ !? -ne 0 ]
-echo "tsh not installed"
-fi
-}
-awscli ()
-netcat ()
-tsh ()
-
+install_awscli
+install_netcat
